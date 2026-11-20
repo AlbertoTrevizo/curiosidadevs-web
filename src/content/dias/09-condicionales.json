@@ -23,7 +23,7 @@
   {
    "titulo": "De and a or",
    "nivel": "facil",
-   "codigo": "usuario = \"leo\"\nclave = \"python123\"\n# TODO 1: si usuario es \"ana\" and clave es\n#         \"python123\", imprime \"Bienvenido\"\n# TODO 2: cambia and por or. ¿Qué pasa?",
+   "codigo": "usuario = \"leo\"\nclave = \"python123\"\n# TODO 1: si usuario es \"ana\" and clave es\n#         \"python123\", imprime \"Bienvenido\"\n# TODO 2: cambia and por or. ¿Qué pasa?\n# Resultado esperado (con or): Bienvenido",
    "salida": "Bienvenido"
   },
   {
