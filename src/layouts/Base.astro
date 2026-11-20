@@ -1,4 +1,5 @@
 ---
+import Analytics from "@vercel/analytics/astro";
 const { titulo = "Curiosida.devs", descripcion = "Aprende programación con ejemplos sencillos." } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
@@ -10,6 +11,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   <meta name="description" content={descripcion} />
   <link rel="icon" href={`${base}/logo.png`} />
   <title>{titulo === "Curiosida.devs" ? titulo : `${titulo} · Curiosida.devs`}</title>
+  <Analytics />
 </head>
 <body>
   <header class="cab">
