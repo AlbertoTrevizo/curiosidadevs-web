@@ -1,0 +1,49 @@
+{
+ "dia": 10,
+ "tema": "Ciclos",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es un ciclo?",
+  "for vuelta in range(100): repite_esto()"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Del 0 al 10",
+   "nivel": "facil",
+   "codigo": "# TODO 1: con for y range, imprime los\n#         números del 0 al 10\n# TODO 2: ¿por qué hay que escribir 11?\n# Resultado esperado: 0 1 2 ... 10",
+   "salida": "0 1 2 3 4 5 6 7 8 9 10"
+  },
+  {
+   "titulo": "Recorre la lista",
+   "nivel": "facil",
+   "codigo": "frutas = [\"mango\", \"fresa\", \"kiwi\"]\n# TODO: con for, imprime cada fruta\n#       en su propia línea\n# Resultado esperado: mango fresa kiwi",
+   "salida": "mango fresa kiwi"
+  },
+  {
+   "titulo": "Solo los pares",
+   "nivel": "facil",
+   "codigo": "# TODO: imprime los pares del 0 al 20 con\n#       range de tres valores:\n#       range(inicio, fin, paso)\n# Resultado esperado: 0 2 4 ... 20",
+   "salida": "0 2 4 6 8 10 12 14 16 18 20"
+  },
+  {
+   "titulo": "Cuenta regresiva",
+   "nivel": "medio",
+   "codigo": "cuenta = 5\n# TODO 1: con while, imprime cuenta mientras\n#         sea mayor a 0 (y réstale 1)\n# TODO 2: al final imprime \"¡Despegue!\"\n# Resultado esperado: 5 4 3 2 1 ¡Despegue!",
+   "salida": "5 4 3 2 1 ¡Despegue!"
+  },
+  {
+   "titulo": "Suma del 1 al 100",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "total = 0\n# TODO 1: con for y range, suma los números del 1 al 100 en total\n# TODO 2: imprime total al terminar\n# Resultado esperado: 5050",
+   "salida": "5050",
+   "prueba": "assert total == 5050, \"Pista: total debe sumar del 1 al 100. Recuerda que range(1, 101) llega hasta 100.\""
+  },
+  {
+   "titulo": "Reto: la tabla del 7",
+   "nivel": "reto",
+   "codigo": "# TODO: con un ciclo, imprime la tabla del 7 de 7 x 1 a 7 x 10\n# Resultado esperado:\n# 7 x 1 = 7\n# 7 x 2 = 14\n# ...\n# 7 x 10 = 70",
+   "salida": "7 x 1 = 7 7 x 2 = 14 7 x 3 = 21 7 x 4 = 28 7 x 5 = 35 7 x 6 = 42 7 x 7 = 49 7 x 8 = 56 7 x 9 = 63 7 x 10 = 70"
+  }
+ ]
+}

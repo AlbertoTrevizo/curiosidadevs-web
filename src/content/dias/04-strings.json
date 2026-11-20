@@ -1,0 +1,53 @@
+{
+ "dia": 4,
+ "tema": "Strings",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es un string?",
+  "texto = \"lo que va entre comillas\""
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Mídelo",
+   "nivel": "facil",
+   "codigo": "company = \"Coding For All\"\n# TODO: imprime company y su largo con len()\n# Resultado esperado: Coding For All 14",
+   "salida": "Coding For All 14"
+  },
+  {
+   "titulo": "Cambia el formato",
+   "nivel": "facil",
+   "codigo": "company = \"Coding For All\"\n# TODO: imprímelo con upper(), lower()\n#       y swapcase()\n# Resultado esperado:\n# CODING FOR ALL\n# coding for all\n# cODING fOR aLL",
+   "salida": "CODING FOR ALL coding for all cODING fOR aLL"
+  },
+  {
+   "titulo": "Limpia los espacios",
+   "nivel": "facil",
+   "codigo": "texto = \"   Coding For All     \"\n# TODO: guarda en limpio el texto sin los\n#       espacios de las orillas (strip())\n# Los métodos no cambian el original:\n# guarda el resultado en una variable\n# Resultado esperado: limpio == \"Coding For All\"",
+   "prueba": "assert \"limpio\" in globals(), \"Pista: guarda el resultado en una variable llamada limpio.\"\nassert limpio == \"Coding For All\", \"Pista: limpio = texto.strip()\""
+  },
+  {
+   "titulo": "Reemplaza y corta",
+   "nivel": "medio",
+   "codigo": "company = \"Coding For All\"\n# TODO 1: cambia \"Coding\" por \"Python\" con replace()\n# TODO 2: corta company en palabras con split()\n# Resultado esperado:\n# Python For All\n# ['Coding', 'For', 'All']",
+   "salida": "Python For All ['Coding', 'For', 'All']"
+  },
+  {
+   "titulo": "¿Está adentro?",
+   "nivel": "medio",
+   "codigo": "company = \"Coding For All\"\n# TODO 1: imprime si \"Coding\" está en company (in)\n# TODO 2: imprime si empieza con \"Coding\"\n# TODO 3: imprime si termina con \"coding\"\n# ¿Por qué el último da False?\n# Resultado esperado: True True False",
+   "salida": "True True False"
+  },
+  {
+   "titulo": "Únelas",
+   "nivel": "medio",
+   "codigo": "libs = [\"Django\", \"Flask\", \"Bottle\"]\n# TODO: únelas con \" # \" usando join()\n# Resultado esperado: Django # Flask # Bottle",
+   "salida": "Django # Flask # Bottle"
+  },
+  {
+   "titulo": "Reto: la abreviatura",
+   "nivel": "reto",
+   "codigo": "frase = \"Python For Everyone\"\n# TODO: crea la abreviatura con split()\n#       y el índice [0] de cada palabra\n# Resultado esperado: PFE",
+   "salida": "PFE"
+  }
+ ]
+}

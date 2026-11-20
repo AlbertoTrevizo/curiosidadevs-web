@@ -1,0 +1,49 @@
+{
+ "dia": 2,
+ "tema": "Variables",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es una variable?",
+  "nombre = \"Ana\"  # una caja con etiqueta"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Tus datos en variables",
+   "nivel": "facil",
+   "codigo": "# TODO 1: crea nombre, apellido, pais y edad\n#         con tus datos (edad sin comillas)\n# TODO 2: muéstralas con un solo print()",
+   "prueba": "assert all(v in globals() for v in (\"nombre\", \"apellido\", \"pais\", \"edad\")), \"Pista: ¿creaste las cuatro variables: nombre, apellido, pais y edad?\"\nassert isinstance(edad, int), \"Pista: edad es un número, va sin comillas.\""
+  },
+  {
+   "titulo": "¿Qué tipo es?",
+   "nivel": "facil",
+   "codigo": "nombre = \"Ana\"\nedad = 20\naltura = 1.65\n# TODO: imprime el tipo de cada variable\n# Resultado esperado:\n# <class 'str'>\n# <class 'int'>\n# <class 'float'>",
+   "salida": "<class 'str'> <class 'int'> <class 'float'>"
+  },
+  {
+   "titulo": "¿Cuántas letras?",
+   "nivel": "facil",
+   "codigo": "nombre = \"Valentina\"\napellido = \"Ruiz\"\n# TODO: imprime cuántas letras tiene cada uno\n#       con len(). ¿Cuál es más largo?\n# Resultado esperado: 9 4",
+   "salida": "9 4"
+  },
+  {
+   "titulo": "El próximo año",
+   "nivel": "medio",
+   "codigo": "edad = input(\"¿Cuántos años tienes? \")\n# TODO: imprime la edad que tendrás el próximo año\n# Pista: input() devuelve texto, usa int()\n# Resultado esperado (con 20): 21",
+   "entrada": "20",
+   "salida": "¿Cuántos años tienes? 21"
+  },
+  {
+   "titulo": "Quítale el int()",
+   "nivel": "medio",
+   "codigo": "edad = \"20\"\nprint(edad + 1)\n# TODO: córrelo, lee el error y arréglalo\n# Resultado esperado: 21",
+   "salida": "21"
+  },
+  {
+   "titulo": "Reto: varias en una línea",
+   "nivel": "reto",
+   "codigo": "# TODO 1: en una sola línea crea nombre y edad\n#         con \"Ana\" y 20\n# TODO 2: imprime las dos\n# Resultado esperado: Ana 20",
+   "salida": "Ana 20",
+   "prueba": "assert nombre == \"Ana\" and edad == 20, \"Pista: nombre, edad = \\\"Ana\\\", 20\""
+  }
+ ]
+}

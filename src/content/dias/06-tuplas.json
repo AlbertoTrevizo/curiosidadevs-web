@@ -1,0 +1,48 @@
+{
+ "dia": 6,
+ "tema": "Tuplas",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es una tupla?",
+  "tupla = (\"datos que van juntos\", \"y no cambian\")"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Intercambia las coordenadas",
+   "nivel": "facil",
+   "codigo": "punto = (19.43, -99.13)\n# TODO 1: en una sola línea, guarda cada valor en latitud y longitud\n# TODO 2: intercambia sus valores, también en una sola línea\n# TODO 3: imprime latitud y longitud\n# Resultado esperado: -99.13 19.43",
+   "salida": "-99.13 19.43",
+   "prueba": "assert latitud == -99.13, \"Pista: tras intercambiar, latitud debe valer -99.13. ¿Intercambiaste en una sola línea?\"\nassert longitud == 19.43, \"Pista: tras intercambiar, longitud debe valer 19.43.\""
+  },
+  {
+   "titulo": "Primera y última",
+   "nivel": "facil",
+   "codigo": "frutas = (\"mango\", \"fresa\", \"uva\")\n# TODO 1: imprime la primera fruta usando su índice\n# TODO 2: imprime la última usando un índice negativo\n# Resultado esperado: mango uva",
+   "salida": "mango uva"
+  },
+  {
+   "titulo": "Días de la semana",
+   "nivel": "facil",
+   "codigo": "dias = (\"lunes\", \"martes\", \"miércoles\")\n# TODO: desempaqueta dias en tres variables e imprímelas",
+   "salida": "lunes martes miércoles"
+  },
+  {
+   "titulo": "Rompe la tupla (a propósito)",
+   "nivel": "medio",
+   "codigo": "colores = (\"rojo\", \"azul\", \"verde\")\n# TODO: intenta cambiar colores[0] por \"negro\"\n# ¿Qué error te da Python? ¿Por qué?"
+  },
+  {
+   "titulo": "¿Cuántos hay?",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "colores = (\"rojo\", \"azul\", \"rojo\", \"verde\")\n# TODO 1: cuenta cuántas veces aparece \"rojo\" con count()\n# TODO 2: busca en qué posición está \"verde\" con index()\n# TODO 3: imprime cuántos colores hay con len()\n# Resultado esperado: 2 3 4",
+   "salida": "2 3 4"
+  },
+  {
+   "titulo": "Reto: de lista a tupla y de vuelta",
+   "nivel": "reto",
+   "codigo": "compras = [\"pan\", \"leche\", \"huevos\"]\n# TODO 1: convierte compras en tupla con tuple()\n# TODO 2: vuelve a convertirla en lista con list()\n# TODO 3: agrega \"café\" a la lista. ¿Podías hacerlo con la tupla?",
+   "prueba": "assert any(isinstance(v, list) and \"café\" in v and \"pan\" in v for v in globals().values()), \"Pista: ¿volviste a convertir la tupla en lista y le agregaste \\\"café\\\" con append()?\""
+  }
+ ]
+}

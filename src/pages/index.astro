@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<Base>
+  <section style="text-align:center;padding:24px 0 32px">
+    <img src={`${base}/logo.png`} alt="Logo de Curiosida.devs" width="110" height="110" style="border-radius:50%" />
+    <h1>Curiosida.devs</h1>
+    <p class="mut" style="font-size:1.15rem;max-width:34em;margin:0 auto">Aprende programación con ejemplos sencillos y practica escribiendo código aquí mismo.</p>
+  </section>
+  <ul class="tarjetas">
+    <li><a class="tarjeta" href={`${base}/30-dias-de-python/`}><h2>30 días de Python</h2><p>Ejercicios de cada día, con editor y revisión al instante.</p></a></li>
+    <li><a class="tarjeta" href={`${base}/guias/`}><h2>Guías</h2><p>Guías rápidas, como perderle el miedo a la terminal.</p></a></li>
+  </ul>
+</Base>

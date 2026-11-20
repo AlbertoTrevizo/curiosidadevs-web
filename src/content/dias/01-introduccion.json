@@ -1,0 +1,40 @@
+{
+ "dia": 1,
+ "tema": "Introducción",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es Python?",
+  "print(\"Hola, mundo\")  # tu primera línea"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Python como calculadora",
+   "nivel": "facil",
+   "codigo": "print(3 + 4)\nprint(3 - 4)\n# TODO: con 3 y 4 prueba también\n#       *  /  **  %  //  (un print por cada uno)\n# ¿Cuál resultado te sorprendió?\n# Resultado esperado: 7 -1 12 0.75 81 3 0",
+   "salida": "7 -1 12 0.75 81 3 0"
+  },
+  {
+   "titulo": "Tu primera línea",
+   "nivel": "facil",
+   "codigo": "# TODO: imprime tu nombre con print()"
+  },
+  {
+   "titulo": "¿Qué tipo es?",
+   "nivel": "facil",
+   "codigo": "# TODO: imprime el tipo de 10, de 9.8\n#       y de \"Ana\" con type()\n# Resultado esperado:\n# <class 'int'>\n# <class 'float'>\n# <class 'str'>",
+   "salida": "<class 'int'> <class 'float'> <class 'str'>"
+  },
+  {
+   "titulo": "Arregla el error",
+   "nivel": "medio",
+   "codigo": "print(\"Hola, mundo)\n# TODO: córrelo, lee el error y arréglalo\n# Resultado esperado: Hola, mundo",
+   "salida": "Hola, mundo"
+  },
+  {
+   "titulo": "Reto: una cuenta exacta",
+   "nivel": "reto",
+   "codigo": "# TODO 1: imprime el resultado de 7 / 7\n# TODO 2: imprime el tipo de ese resultado\n# ¿Por qué es float si la cuenta da exacta?\n# Resultado esperado:\n# 1.0\n# <class 'float'>",
+   "salida": "1.0 <class 'float'>"
+  }
+ ]
+}

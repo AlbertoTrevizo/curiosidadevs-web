@@ -1,0 +1,46 @@
+{
+ "dia": 12,
+ "tema": "Módulos",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es un módulo?",
+  "import herramientas  # otro archivo .py que ya hace el trabajo"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Matemáticas listas",
+   "nivel": "facil",
+   "codigo": "# TODO 1: importa math\n# TODO 2: imprime math.pi\n# TODO 3: imprime math.floor(7.9)\n# Resultado esperado: 3.14159... 7",
+   "salida": "3.141592653589793 7"
+  },
+  {
+   "titulo": "El promedio",
+   "nivel": "facil",
+   "codigo": "notas = [70, 85, 90, 100]\n# TODO: importa statistics e imprime\n#       el promedio de notas con mean()\n# Resultado esperado: 86.25",
+   "salida": "86.25"
+  },
+  {
+   "titulo": "Piedra, papel o tijera",
+   "nivel": "facil",
+   "codigo": "opciones = [\"piedra\", \"papel\", \"tijera\"]\n# TODO: importa random y elige una al\n#       azar con random.choice()\n# Resultado esperado: una de las tres"
+  },
+  {
+   "titulo": "Apodos y from",
+   "nivel": "medio",
+   "codigo": "# TODO 1: importa math con el apodo m (as)\n#         e imprime la raíz de 144\n# TODO 2: ahora importa solo sqrt con from\n#         y úsala sin el prefijo\n# Resultado esperado: 12.0 12.0",
+   "salida": "12.0 12.0"
+  },
+  {
+   "titulo": "Tu primer módulo",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "# TODO 1: crea herramientas.py con descuento(precio) que devuelva el precio con 10% menos\n# TODO 2: en main.py (misma carpeta) impórtala con from e imprime descuento(200)\n# Resultado esperado: 180.0",
+   "editor": false
+  },
+  {
+   "titulo": "Reto: ¿salió doble?",
+   "nivel": "reto",
+   "codigo": "# TODO 1: importa random y tira dos dados (randint del 1 al 6) cinco veces\n# TODO 2: imprime cada tirada y cuenta cuántas veces salieron iguales\n# Resultado esperado: 5 tiradas y cuántos dobles (cambia cada vez)"
+  }
+ ]
+}

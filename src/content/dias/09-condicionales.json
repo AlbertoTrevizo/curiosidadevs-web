@@ -1,0 +1,49 @@
+{
+ "dia": 9,
+ "tema": "Condicionales",
+ "modo": "claro",
+ "que_es": [
+  "¿Qué es un condicional?",
+  "if clave == guardada: entras    else: no entras"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "¿Puede entrar?",
+   "nivel": "facil",
+   "codigo": "edad = int(input(\"Tu edad: \"))\n# TODO: si tiene 18 o más, imprime\n#       \"Adelante\"; si no, \"Todavía no\"\n# Resultado esperado (con 20): Adelante",
+   "salida": "Tu edad: Adelante",
+   "entrada": "20"
+  },
+  {
+   "titulo": "Positivo, negativo o cero",
+   "nivel": "facil",
+   "codigo": "numero = -7\n# TODO: con if, elif y else imprime\n#       \"positivo\", \"negativo\" o \"cero\"\n# Resultado esperado: negativo",
+   "salida": "negativo"
+  },
+  {
+   "titulo": "De and a or",
+   "nivel": "facil",
+   "codigo": "usuario = \"leo\"\nclave = \"python123\"\n# TODO 1: si usuario es \"ana\" and clave es\n#         \"python123\", imprime \"Bienvenido\"\n# TODO 2: cambia and por or. ¿Qué pasa?",
+   "salida": "Bienvenido"
+  },
+  {
+   "titulo": "Calificación",
+   "nivel": "medio",
+   "codigo": "nota = 85\n# TODO: imprime la letra según la nota:\n#       90+ A, 80+ B, 70+ C, 60+ D, menos F\n# Resultado esperado: B",
+   "salida": "B"
+  },
+  {
+   "titulo": "Estación del año",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "mes = \"abril\"\n# TODO: imprime la estación del mes (usa in con una lista de meses por estación)\n#       primavera: marzo, abril, mayo · verano: junio, julio, agosto\n#       otoño: septiembre, octubre, noviembre · invierno: diciembre, enero, febrero\n# Resultado esperado: primavera",
+   "salida": "primavera"
+  },
+  {
+   "titulo": "Reto: bloquea la cuenta",
+   "nivel": "reto",
+   "codigo": "usuario = \"ana\"\nclave = \"hola\"\nintentos = 3\n# TODO 1: si intentos es 3, imprime \"Cuenta bloqueada\" y no revises nada más\n# TODO 2: si no, revisa primero el usuario y, con un if dentro de otro, la clave\n# Resultado esperado: Cuenta bloqueada",
+   "salida": "Cuenta bloqueada"
+  }
+ ]
+}

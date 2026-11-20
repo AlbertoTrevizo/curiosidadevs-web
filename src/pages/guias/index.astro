@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const guias = (await getCollection("guias")).sort((a, b) => +b.data.fecha - +a.data.fecha);
+---
+<Base titulo="Guías">
+  <h1>Guías</h1>
+  <ul class="tarjetas">
+    {guias.map((g) => (
+      <li><a class="tarjeta" href={`${base}/guias/${g.id}/`}><h2>{g.data.titulo}</h2><p>{g.data.descripcion}</p></a></li>
+    ))}
+  </ul>
+</Base>

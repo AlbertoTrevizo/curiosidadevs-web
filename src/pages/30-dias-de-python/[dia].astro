@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Editor from "../../components/Editor.tsx";
+import { aHtml } from "../../lib/pinta";
+export async function getStaticPaths() {
+  return (await getCollection("dias")).map((d) => ({ params: { dia: d.id }, props: { d } }));
+}
+const { d } = Astro.props;
+const { dia, tema, que_es, ejercicios } = d.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const NIVEL = { facil: ["Fácil", "#2fb57a"], medio: ["Medio", "#d99a1e"], reto: ["Reto", "#e0559f"] } as const;
+---
+<Base titulo={`Día ${dia} · ${tema}`}>
+  <p><a href={`${base}/30-dias-de-python/`}>← Todos los días</a></p>
+  <h1><span class="mut" style="font-weight:700">Día {dia} ·</span> <span style="color:var(--acc)">{tema}</span></h1>
+  <section class="def" aria-label={que_es[0]}>
+    <small>{que_es[0]}</small>
+    <pre set:html={aHtml(que_es[1])}></pre>
+  </section>
+  <ol class="fichas">
+    {ejercicios.map((e, i) => {
+      const [nombre, color] = NIVEL[e.nivel];
+      return (
+        <li class="ficha">
+          <h2 class="fh">{e.nivel === "reto" ? "⭐ " : `${i + 1}. `}{e.titulo}
+            <span class="lv" style={`color:${color};background:${color}22`}>{nombre}</span></h2>
+          {e.editor === false ? (
+            <>
+              <pre class="solo" set:html={aHtml(e.codigo)}></pre>
+              <p class="nota">Este hazlo en tu computadora: necesita dos archivos.</p>
+            </>
+          ) : (
+            <Editor client:visible codigo={e.codigo} salida={e.salida} prueba={e.prueba} entrada={e.entrada} archivo={`ejercicio${i + 1}.py`} />
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</Base>
+<style is:global>
+  .def { margin:16px 0 24px; background:var(--panel); border:1px solid var(--borde); border-left:4px solid var(--acc); border-radius:16px; padding:14px 18px; box-shadow:var(--sombra-s); display:flex; flex-wrap:wrap; align-items:center; gap:6px 18px; }
+  .def small { color:var(--mut); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; }
+  .def pre, .solo { margin:0; font:.9rem var(--mono); white-space:pre-wrap; overflow-wrap:anywhere; }
+  .fichas { list-style:none; padding:0; margin:0; display:grid; gap:24px; }
+  .ficha { min-width:0; }
+  .fh { display:flex; flex-wrap:wrap; align-items:center; gap:8px; font-size:1.2rem; margin:0 0 10px; }
+  .lv { font-size:.75rem; font-weight:700; padding:2px 10px; border-radius:999px; }
+  .solo { background:var(--panel); border:1px solid var(--borde); border-radius:14px; padding:14px 16px; box-shadow:var(--sombra-s); }
+  .nota { color:var(--mut); margin:8px 0 0; }
+</style>

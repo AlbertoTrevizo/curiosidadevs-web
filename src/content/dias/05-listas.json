@@ -1,0 +1,47 @@
+{
+ "dia": 5,
+ "tema": "Listas",
+ "modo": "claro",
+ "que_es": [
+  "¿Qué es una lista?",
+  "compras = [\"leche\", \"pan\", \"huevos\"]"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "La copia de verdad",
+   "nivel": "facil",
+   "codigo": "frutas = [\"🥭\", \"🍓\"]\ncopia = frutas.copy()\n# TODO 1: agrega \"🥝\" solo a la copia\n# TODO 2: imprime frutas\n# TODO 3: imprime copia\n# Resultado esperado:\n# ['🥭', '🍓']\n# ['🥭', '🍓', '🥝']",
+   "salida": "['🥭', '🍓'] ['🥭', '🍓', '🥝']"
+  },
+  {
+   "titulo": "Primera, de en medio y última",
+   "nivel": "facil",
+   "codigo": "empresas = [\"Facebook\", \"Google\", \"Microsoft\",\n            \"Apple\", \"IBM\", \"Oracle\", \"Amazon\"]\n# TODO 1: imprime cuántas hay con len()\n# TODO 2: imprime la primera, la de en medio\n#         y la última (con un índice negativo)\n# Resultado esperado: 7 Facebook Apple Amazon",
+   "salida": "7 Facebook Apple Amazon"
+  },
+  {
+   "titulo": "¿Está en la lista?",
+   "nivel": "facil",
+   "codigo": "empresas = [\"Google\", \"Apple\", \"IBM\"]\n# TODO: imprime si \"Google\" está en la lista\n#       y luego si \"Tesla\" está (usa in)\n# Resultado esperado: True False",
+   "salida": "True False"
+  },
+  {
+   "titulo": "Agrega empresas",
+   "nivel": "medio",
+   "codigo": "empresas = [\"Google\", \"Apple\", \"IBM\"]\n# TODO 1: agrega \"Amazon\" al final con append()\n# TODO 2: mete \"Oracle\" en la posición 1\n#         con insert()\n# TODO 3: imprime la lista\n# Resultado esperado:\n# ['Google', 'Oracle', 'Apple', 'IBM', 'Amazon']",
+   "salida": "['Google', 'Oracle', 'Apple', 'IBM', 'Amazon']"
+  },
+  {
+   "titulo": "Ordena y voltea",
+   "nivel": "medio",
+   "codigo": "numeros = [5, 2, 9, 1]\n# TODO 1: ordénala con sort() e imprímela\n# TODO 2: voltéala con reverse() e imprímela\n# Resultado esperado:\n# [1, 2, 5, 9]\n# [9, 5, 2, 1]",
+   "salida": "[1, 2, 5, 9] [9, 5, 2, 1]"
+  },
+  {
+   "titulo": "Reto: full stack",
+   "nivel": "reto",
+   "codigo": "front_end = [\"HTML\", \"CSS\", \"JS\", \"React\", \"Redux\"]\nback_end = [\"Node\", \"Express\", \"MongoDB\"]\n# TODO 1: únelas en una lista llamada full_stack\n# TODO 2: mete \"Python\" y \"SQL\" justo después\n#         de \"Redux\"\n# TODO 3: imprime full_stack",
+   "prueba": "assert \"full_stack\" in globals(), \"Pista: guarda la lista unida en una variable llamada full_stack.\"\nassert full_stack == [\"HTML\", \"CSS\", \"JS\", \"React\", \"Redux\", \"Python\", \"SQL\", \"Node\", \"Express\", \"MongoDB\"], \"Pista: une con + y usa insert() con la posición que va justo después de \\\"Redux\\\".\""
+  }
+ ]
+}

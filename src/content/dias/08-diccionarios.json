@@ -1,0 +1,49 @@
+{
+ "dia": 8,
+ "tema": "Diccionarios",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es un diccionario?",
+  "diccionario = {\"clave\": \"valor\", \"buscas por\": \"nombre\"}"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "La agenda",
+   "nivel": "facil",
+   "codigo": "agenda = {\"mamá\": \"55 1234\",\n          \"Luis\": \"81 5678\"}\n# TODO 1: agrega a \"Sara\" con \"33 9012\"\n# TODO 2: borra a \"Luis\"\n# TODO 3: imprime solo los nombres\n# Resultado esperado:\n# dict_keys(['mamá', 'Sara'])",
+   "salida": "dict_keys(['mamá', 'Sara'])",
+   "prueba": "assert agenda == {\"mamá\": \"55 1234\", \"Sara\": \"33 9012\"}, \"Pista: ¿agregaste a Sara con su número y borraste a Luis?\""
+  },
+  {
+   "titulo": "Tu mascota",
+   "nivel": "facil",
+   "codigo": "perro = {}\n# TODO 1: imprime len(perro). ¿Cuánto da?\n# TODO 2: llénalo con nombre, color, edad y dueño\n# TODO 3: imprime cada dato usando su clave",
+   "prueba": "for k in (\"nombre\", \"color\", \"edad\", \"dueño\"):\n    assert k in perro, \"Pista: a perro le falta la clave \\\"%s\\\". ¿Lo llenaste con las cuatro?\" % k"
+  },
+  {
+   "titulo": "Agrega y cambia",
+   "nivel": "facil",
+   "codigo": "perro = {\"edad\": 3}\n# TODO 1: agrega \"patas\" con el valor 4\n# TODO 2: cambia la edad a 4\n# Resultado esperado:\n# {'edad': 4, 'patas': 4}",
+   "prueba": "assert perro == {\"edad\": 4, \"patas\": 4}, \"Pista: perro debe quedar con edad 4 y patas 4. ¿Agregaste patas y cambiaste la edad?\""
+  },
+  {
+   "titulo": "Pídele todo",
+   "nivel": "medio",
+   "codigo": "precios = {\"pan\": 5, \"café\": 90}\n# TODO 1: imprime las claves con keys()\n# TODO 2: imprime los valores con values()\n# TODO 3: imprime los pares con items()",
+   "salida": "dict_keys(['pan', 'café']) dict_values([5, 90]) dict_items([('pan', 5), ('café', 90)])"
+  },
+  {
+   "titulo": "La clave que no existe",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "perro = {\"nombre\": \"Firulais\", \"color\": \"café\"}\n# TODO 1: pide perro[\"raza\"]. ¿Qué error te da?\n# TODO 2: ahora pide perro.get(\"raza\"). ¿Qué cambia?\n# Resultado esperado: KeyError / None"
+  },
+  {
+   "titulo": "Reto: limpia la ficha",
+   "nivel": "reto",
+   "codigo": "gato = {\"nombre\": \"Michi\", \"color\": \"gris\", \"edad\": 2, \"dueño\": \"Ana\"}\n# TODO 1: borra la clave \"color\" con pop() y guarda lo que regresa\n# TODO 2: imprime lo que borraste y cuántas claves quedan con len()\n# Resultado esperado: gris 3",
+   "salida": "gris 3",
+   "prueba": "assert \"color\" not in gato, \"Pista: ¿borraste la clave \\\"color\\\" con pop()?\"\nassert len(gato) == 3, \"Pista: gato debe quedar con 3 claves.\""
+  }
+ ]
+}

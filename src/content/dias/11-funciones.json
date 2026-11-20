@@ -1,0 +1,50 @@
+{
+ "dia": 11,
+ "tema": "Funciones",
+ "modo": "claro",
+ "que_es": [
+  "¿Qué es una función?",
+  "def maquina(entra): return sale"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Suma y guarda",
+   "nivel": "facil",
+   "codigo": "# TODO 1: crea sumar(a, b) que devuelva\n#         a + b con return\n# TODO 2: guarda sumar(2, 3) en total\n# TODO 3: imprime total + 10\n# Resultado esperado: 15",
+   "salida": "15",
+   "prueba": "assert callable(globals().get(\"sumar\")), \"Pista: ¿definiste la función sumar(a, b)?\"\nassert sumar(2, 3) == 5, \"Pista: sumar debe devolver (return) a + b, no solo imprimirlo.\"\nassert total == 5, \"Pista: ¿guardaste sumar(2, 3) en total?\""
+  },
+  {
+   "titulo": "Área del rectángulo",
+   "nivel": "facil",
+   "codigo": "# TODO 1: crea area_rectangulo(base, altura)\n#         que devuelva base por altura\n# TODO 2: imprime area_rectangulo(4, 5)\n# Resultado esperado: 20",
+   "salida": "20",
+   "prueba": "assert callable(globals().get(\"area_rectangulo\")), \"Pista: ¿definiste area_rectangulo(base, altura)?\"\nassert area_rectangulo(4, 5) == 20, \"Pista: la función debe devolver (return) base por altura.\"\nassert area_rectangulo(3, 2) == 6, \"Pista: usa los parámetros, no números fijos.\""
+  },
+  {
+   "titulo": "¿Es par?",
+   "nivel": "facil",
+   "codigo": "# TODO: crea es_par(numero) que devuelva\n#       True si es par y False si no\n#       (pista: numero % 2)\n# Resultado esperado: es_par(4) → True",
+   "prueba": "assert callable(globals().get(\"es_par\")), \"Pista: ¿definiste es_par(numero)?\"\nassert es_par(4) is True, \"Pista: es_par(4) debe devolver True.\"\nassert es_par(7) is False, \"Pista: es_par(7) debe devolver False. Piensa en numero % 2.\""
+  },
+  {
+   "titulo": "Suma toda la lista",
+   "nivel": "medio",
+   "codigo": "precios = [25, 40, 15]\n# TODO: crea sumar_todo(numeros) que\n#       recorra la lista y devuelva\n#       la suma de todos\n# Resultado esperado: 80",
+   "prueba": "assert callable(globals().get(\"sumar_todo\")), \"Pista: ¿definiste sumar_todo(numeros)?\"\nassert sumar_todo(precios) == 80, \"Pista: la función debe devolver (return) la suma de toda la lista.\"\nassert sumar_todo([1, 2]) == 3, \"Pista: recorre la lista que recibes, no uses precios fijo.\""
+  },
+  {
+   "titulo": "print contra return",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "# TODO 1: crea doble_print(n) que haga print(n * 2)\n# TODO 2: crea doble_return(n) que haga return n * 2\n# TODO 3: guarda doble_print(4) y doble_return(4) en variables e imprímelas\n# ¿Qué sale en cada una? ¿Por qué?",
+   "prueba": "assert callable(globals().get(\"doble_print\")) and callable(globals().get(\"doble_return\")), \"Pista: ¿definiste doble_print y doble_return?\"\nassert doble_return(4) == 8, \"Pista: doble_return debe devolver (return) n * 2.\"\nassert doble_print(4) is None, \"Pista: doble_print solo imprime; no debe devolver nada.\""
+  },
+  {
+   "titulo": "Reto: factorial",
+   "nivel": "reto",
+   "codigo": "# TODO: crea factorial(n) que devuelva n x (n-1) x ... x 1\n#       (usa un ciclo y una variable que acumule)\n# Resultado esperado: factorial(5) → 120",
+   "prueba": "assert callable(globals().get(\"factorial\")), \"Pista: ¿definiste factorial(n)?\"\nassert factorial(5) == 120, \"Pista: factorial(5) debe devolver 120. ¿Acumulas el producto en una variable?\"\nassert factorial(3) == 6 and factorial(1) == 1, \"Pista: revisa el caso pequeño; la variable que acumula empieza en 1.\""
+  }
+ ]
+}

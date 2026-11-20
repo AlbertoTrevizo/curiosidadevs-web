@@ -1,0 +1,48 @@
+{
+ "dia": 3,
+ "tema": "Operadores",
+ "modo": "oscuro",
+ "que_es": [
+  "¿Qué es un operador?",
+  "7 // 2  # un símbolo que hace una cuenta"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Divisiones distintas",
+   "nivel": "facil",
+   "codigo": "# TODO: imprime 7 / 2, 7 // 2, 7 % 2 y 2 ** 10\n# ¿Cuál tira los decimales? ¿Cuál da lo que sobra?\n# Resultado esperado: 3.5 3 1 1024",
+   "salida": "3.5 3 1 1024"
+  },
+  {
+   "titulo": "La suma rara",
+   "nivel": "facil",
+   "codigo": "print(0.1 + 0.2)\n# TODO: imprime la misma suma redondeada\n#       a 2 decimales con round()\n# Resultado esperado: 0.30000000000000004 0.3",
+   "salida": "0.30000000000000004 0.3"
+  },
+  {
+   "titulo": "Área del triángulo",
+   "nivel": "facil",
+   "codigo": "base = 20\naltura = 10\n# TODO: calcula el área (0.5 * base * altura)\n#       e imprímela\n# Resultado esperado: 100.0",
+   "salida": "100.0"
+  },
+  {
+   "titulo": "¿Es par?",
+   "nivel": "medio",
+   "codigo": "numero = int(input(\"Un número: \"))\n# TODO: imprime True si es par (usa %)\n# Pruébalo con 7 y con tu edad\n# Resultado esperado (con 8): True",
+   "entrada": "8",
+   "salida": "Un número: True"
+  },
+  {
+   "titulo": "Un igual guarda, dos comparan",
+   "nivel": "medio",
+   "codigo": "x = 5\n# TODO: predice qué sale antes de correrlo\nprint(x == 5)\nprint(x != 5)\nprint(type(\"10\") == type(10))"
+  },
+  {
+   "titulo": "Reto: pago semanal",
+   "nivel": "reto",
+   "codigo": "horas = float(input(\"Horas trabajadas: \"))\npago_hora = 28\n# TODO: calcula e imprime el pago semanal\n# Resultado esperado (con 40 horas): 1120.0",
+   "entrada": "40",
+   "salida": "Horas trabajadas: 1120.0"
+  }
+ ]
+}

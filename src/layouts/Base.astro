@@ -1,0 +1,64 @@
+---
+const { titulo = "Curiosida.devs", descripcion = "Aprende programación con ejemplos sencillos." } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={descripcion} />
+  <link rel="icon" href={`${base}/logo.png`} />
+  <title>{titulo === "Curiosida.devs" ? titulo : `${titulo} · Curiosida.devs`}</title>
+</head>
+<body>
+  <header class="cab">
+    <a class="marca" href={`${base}/`}><img src={`${base}/logo.png`} alt="" width="40" height="40" /> Curiosida.devs</a>
+    <nav aria-label="Principal">
+      <a href={`${base}/30-dias-de-python/`}>30 días de Python</a>
+      <a href={`${base}/guias/`}>Guías</a>
+    </nav>
+  </header>
+  <main><slot /></main>
+  <footer class="pie">Curiosida.devs · aprendemos juntos</footer>
+</body>
+</html>
+<style is:global>
+  :root { --bg:#F0ECE1; --panel:#fff; --borde:#E2DCCD; --t:#0A0A0A; --mut:#7A7466; --acc:#C17F5E; --rojo:#C8452F; --verde:#4E8A5A;
+    --sombra:0 24px 60px rgba(60,45,20,.16); --sombra-s:0 8px 24px rgba(60,45,20,.10);
+    --mono:"SF Mono",Menlo,monospace; }
+  * { box-sizing: border-box; }
+  html { overflow-x: hidden; }
+  body { margin:0; color:var(--t); font-family:-apple-system,"SF Pro Display","Helvetica Neue",sans-serif; line-height:1.55;
+    background-color:var(--bg); background-attachment:fixed; min-height:100vh; display:flex; flex-direction:column; position:relative; }
+  body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:radial-gradient(rgba(70,55,30,.18) 2.2px, transparent 2.2px) 0 0/26px 26px;
+    -webkit-mask-image:radial-gradient(ellipse at 100% 0, #000 0, transparent 55%), radial-gradient(ellipse at 0 100%, #000 0, transparent 55%);
+    mask-image:radial-gradient(ellipse at 100% 0, #000 0, transparent 55%), radial-gradient(ellipse at 0 100%, #000 0, transparent 55%); }
+  main { width:100%; max-width:980px; margin:0 auto; padding:24px 16px 56px; flex:1; }
+  h1,h2,h3 { font-weight:800; letter-spacing:-.01em; line-height:1.15; }
+  h1 { font-size:clamp(1.9rem,6vw,2.8rem); margin:.2em 0 .4em; }
+  a { color:var(--acc); }
+  .cab { display:flex; flex-wrap:wrap; gap:8px 24px; align-items:center; justify-content:space-between; max-width:980px; margin:0 auto; width:100%; padding:16px; }
+  .marca { display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem; color:var(--t); text-decoration:none; }
+  .marca img { border-radius:50%; }
+  .cab nav { display:flex; gap:20px; }
+  .cab nav a { color:var(--t); font-weight:600; text-decoration:none; padding:6px 0; border-bottom:2px solid transparent; }
+  .cab nav a:hover, .cab nav a:focus-visible { border-color:var(--acc); }
+  .pie { text-align:center; color:var(--mut); padding:24px 16px; font-size:.9rem; }
+  .tarjetas { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; padding:0; list-style:none; }
+  .tarjeta { display:block; background:var(--panel); border:1px solid var(--borde); border-radius:16px; padding:18px 20px; box-shadow:var(--sombra-s); color:var(--t); text-decoration:none; }
+  .tarjeta:hover, .tarjeta:focus-visible { border-color:var(--acc); }
+  .tarjeta h2, .tarjeta h3 { margin:0 0 4px; font-size:1.2rem; }
+  .tarjeta p { margin:0; color:var(--mut); }
+  .mut { color:var(--mut); }
+  /* resaltado de código */
+  .c { color:#9A937F; } .s { color:#B5654A; } .res { color:var(--verde); }
+  .todo { color:var(--acc); font-weight:700; }
+  .prosa { background:var(--panel); border:1px solid var(--borde); border-radius:16px; box-shadow:var(--sombra); padding:8px 20px 20px; overflow-wrap:anywhere; }
+  .prosa table { border-collapse:collapse; display:block; overflow-x:auto; }
+  .prosa th,.prosa td { border:1px solid var(--borde); padding:6px 10px; text-align:left; }
+  .prosa code { font-family:var(--mono); background:#F6F2E8; padding:1px 5px; border-radius:5px; }
+  .prosa pre { overflow-x:auto; background:#F6F2E8; padding:12px; border-radius:10px; }
+  .prosa pre code { padding:0; background:none; }
+</style>

@@ -1,0 +1,46 @@
+{
+ "dia": 7,
+ "tema": "Sets",
+ "modo": "claro",
+ "que_es": [
+  "¿Qué es un set?",
+  "set = {\"sin repetidos\", \"sin orden\", \"entre llaves\"}"
+ ],
+ "ejercicios": [
+  {
+   "titulo": "Amigos en común",
+   "nivel": "facil",
+   "codigo": "mios = {\"Luis\", \"Paty\", \"Leo\"}\nde_sara = {\"Luis\", \"Paty\", \"Mar\"}\nde_pepe = {\"Paty\", \"Mar\", \"Ana\"}\n# TODO 1: los que compartes con Sara\n# TODO 2: los que tienen los tres\n# TODO 3: todos, sin repetir a nadie\n# TODO 4: los que solo tú tienes"
+  },
+  {
+   "titulo": "Adiós, repetidos",
+   "nivel": "facil",
+   "codigo": "nombres = [\"Ana\", \"Luis\", \"Ana\", \"Luis\"]\n# TODO 1: conviértela en set con set()\n# TODO 2: imprime cuántos distintos hay\n# Resultado esperado: 2",
+   "salida": "2"
+  },
+  {
+   "titulo": "Agrega y quita",
+   "nivel": "facil",
+   "codigo": "frutas = {\"mango\", \"fresa\"}\n# TODO 1: agrega \"kiwi\" con add()\n# TODO 2: quita \"fresa\" con remove()\n# TODO 3: imprime frutas\n# Resultado esperado: {'mango', 'kiwi'}",
+   "prueba": "assert frutas == {\"mango\", \"kiwi\"}, \"Pista: frutas debe quedar con mango y kiwi. ¿Agregaste kiwi y quitaste fresa?\""
+  },
+  {
+   "titulo": "¿Está o no está?",
+   "nivel": "facil",
+   "codigo": "invitados = {\"Ana\", \"Leo\", \"Mar\"}\n# TODO 1: pregunta si \"Leo\" está con in\n# TODO 2: pregunta si \"Paty\" está\n# Resultado esperado: True False",
+   "salida": "True False"
+  },
+  {
+   "titulo": "Compara dos sets",
+   "nivel": "medio",
+   "ancho": true,
+   "codigo": "a = {1, 2, 3}\nb = {1, 2, 3, 4, 5}\n# TODO 1: ¿está a completo dentro de b? Usa issubset()\n# TODO 2: imprime a ^ b. ¿Qué hace el símbolo ^?\n# Resultado esperado: True {4, 5}",
+   "salida": "True {4, 5}"
+  },
+  {
+   "titulo": "Reto: la fiesta",
+   "nivel": "reto",
+   "codigo": "lista_ana = [\"Leo\", \"Mar\", \"Leo\", \"Paty\", \"Luis\"]\nlista_leo = [\"Mar\", \"Paty\", \"Ana\", \"Mar\"]\n# TODO 1: ¿quiénes están en las dos listas? (sin repetir)\n# TODO 2: ¿cuántas personas distintas hay en total?\n# TODO 3: ¿a quién invitó Ana que Leo no?"
+  }
+ ]
+}
