@@ -1,0 +1,12 @@
+---
+import Base from "../../layouts/Base.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<Base titulo="¡Gracias!">
+  <section class="prosa" style="max-width:460px;margin:0 auto;text-align:center;padding:32px 24px">
+    <p style="font-size:2.5rem;margin:0">❤️</p>
+    <h1>¡Gracias por tu apoyo!</h1>
+    <p class="mut">Tu donación me ayuda a seguir creando contenido gratis. Stripe te mandará el recibo por correo.</p>
+    <p><a href={`${base}/30-dias-de-python/`}>Seguir practicando →</a></p>
+  </section>
+</Base>

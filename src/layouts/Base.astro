@@ -17,6 +17,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <nav aria-label="Principal">
       <a href={`${base}/30-dias-de-python/`}>30 días de Python</a>
       <a href={`${base}/guias/`}>Guías</a>
+      <a class="btn-donar" href={`${base}/donar/`}><span aria-hidden="true">♥</span> Donar</a>
     </nav>
   </header>
   <main><slot /></main>
@@ -45,6 +46,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   .cab nav { display:flex; gap:20px; }
   .cab nav a { color:var(--t); font-weight:600; text-decoration:none; padding:6px 0; border-bottom:2px solid transparent; }
   .cab nav a:hover, .cab nav a:focus-visible { border-color:var(--acc); }
+  .cab nav { align-items:center; }
+  .cab nav .btn-donar { padding:6px 14px; border:1px solid var(--borde); border-radius:999px; background:var(--panel); }
+  .cab nav .btn-donar span { color:var(--rojo); }
+  .cab nav .btn-donar:hover, .cab nav .btn-donar:focus-visible { border-color:var(--rojo); }
   .pie { text-align:center; color:var(--mut); padding:24px 16px; font-size:.9rem; }
   .tarjetas { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; padding:0; list-style:none; }
   .tarjeta { display:block; background:var(--panel); border:1px solid var(--borde); border-radius:16px; padding:18px 20px; box-shadow:var(--sombra-s); color:var(--t); text-decoration:none; }
